@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Chat</title>
+</head>
+<body>
+  <h1>Video Chat</h1>
+  <button id="start-button">Start Video Chat</button>
+  <button id="stop-button" style="display: none;">Stop Video Chat</button>
+  <div id="video-container" style="display: none;">
+    <video id="localVideo" autoplay></video>
+    <video id="remoteVideo" autoplay></video>
+  </div>
+  <div id="chat-container" style="display: none;">
+    <div id="chat-messages"></div>
+    <input type="text" id="message-input" placeholder="Type your message here">
+    <button id="send-button">Send</button>
+  </div>
+  <div id="record-container" style="display: none;">
+    <button id="start-record">Start Recording</button>
+    <button id="stop-record" disabled>Stop Recording</button>
+    <div id="record-timer" style="display: none;">00:00</div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
